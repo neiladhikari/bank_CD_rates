@@ -1,9 +1,7 @@
 #A web scraper to pull current top CD rates for various terms/ periods and the respective banks, as published on bankrate.com.
+
 from bs4 import BeautifulSoup
 import requests
-import lxml
-import pandas as pd
-import io
 
 page = requests.get("https://www.bankrate.com/banking/cds/current-cd-interest-rates/")
 soup = BeautifulSoup(page.content, 'html.parser')
